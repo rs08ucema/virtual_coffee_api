@@ -3,7 +3,7 @@ import csv
 
 def load_orders():
     orders = []
-    with open('src/db/orders.csv', 'r') as books_file:
+    with open('db/orders.csv', 'r') as books_file:
         rows = csv.DictReader(books_file)
 
         for row in rows:
@@ -13,7 +13,7 @@ def load_orders():
 
 
 def save_new_order(order):
-    with open('src/db/orders.csv', 'a') as orders_file:
+    with open('db/orders.csv', 'a') as orders_file:
         # Define headers
         header = []
 
